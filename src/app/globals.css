@@ -13,33 +13,38 @@
   --font-sans: var(--font-geist-sans);
 }
 
-/* Dark theme tokens (auto via prefers-color-scheme) */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* stylelint-disable at-rule-no-unknown */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
 }
+/* stylelint-enable at-rule-no-unknown */
 
 /* Small reset */
 * {
   box-sizing: border-box;
 }
 
-/* Animated gradient background */
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Apply theme tokens and font variable (from layout.tsx) */
+/* Neutral, professional surface */
 body {
-  background: linear-gradient(120deg, #1e3a8a, #9333ea, #e11d48);
-  background-size: 200% 200%;
-  animation: gradientShift 18s ease infinite;
+  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Remove underline from all links by default */
+a { text-decoration: none; }
+a:hover { text-decoration: none; }
+
+/* Navbar link polish */
+.navbar .nav-link {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  color: inherit;
+}
+.navbar .nav-link:hover {
+  background: rgba(0, 0, 0, 0.06);
 }
 
 /* Optional container utility (not used by Tailwind container) */
@@ -51,5 +56,68 @@ body {
 
 /* Elevate content on animated bg */
 main {
-  backdrop-filter: saturate(120%) blur(6px);
+  background: transparent;
+}
+
+/* Simple reveal up animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-up {
+  animation: fadeUp 700ms ease-out both;
+}
+.reveal-delay-1 { animation-delay: 100ms; }
+.reveal-delay-2 { animation-delay: 200ms; }
+.reveal-delay-3 { animation-delay: 300ms; }
+
+/* Button enhancements */
+.btn {
+  border-radius: 9999px;
+  padding: 0.6rem 1rem;
+  transition: all 180ms ease;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.25);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border: 1px solid #1d4ed8;
+}
+.btn-primary:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.btn-outline-primary {
+  background: white;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+.btn-outline-primary:hover {
+  background: #eff6ff;
+}
+
+.btn-sm { padding: 0.4rem 0.75rem; font-size: 0.875rem; }
+
+/* Ghost button for dark surfaces */
+.btn-ghost-light {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.btn-ghost-light:hover {
+  background: #ffffff;
+  color: #1d4ed8;
 }
