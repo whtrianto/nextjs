@@ -12,7 +12,7 @@ const Inter_import = Inter({ subsets: ["latin"], variable: "--font-geist-sans" }
 // Default SEO metadata applied to every page
 export const metadata: Metadata = {
   title: "Toko Mebel Evas | Perusahaan Furnitur Profesional",
-  description: "Toko Mebel Evas: katalog furnitur, layanan custom, dan konsultasi. Hubungi kami di 0899666077720.",
+  description: "Toko Mebel Evas: katalog furnitur, layanan custom, dan konsultasi. Hubungi kami di 089666077720.",
   icons: { icon: "/favicon.ico" }
 };
 

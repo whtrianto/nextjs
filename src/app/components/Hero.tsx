@@ -37,13 +37,13 @@ export default function Hero() {
               Lihat Layanan
             </Link>
             <Link
-              href="https://wa.me/62899666077720"
+              href="https://wa.me/6289666077720"
               className="btn btn-ghost-light"
               data-bs-toggle="tooltip"
               data-bs-title="Hubungi via WhatsApp"
               target="_blank"
             >
-              <span className="me-2">💬</span> WhatsApp 0899-6660-77720
+              <span className="me-2">💬</span> WhatsApp 089-6660-77720
             </Link>
           </div>
         </div>

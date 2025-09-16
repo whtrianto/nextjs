@@ -129,8 +129,8 @@ export default function Home() {
         <div className="max-w-md">
           <p className="text-gray-600">Butuh penawaran atau konsultasi produk mebel? Hubungi kami.</p>
           <div className="mt-3 flex gap-3">
-            <a href="https://wa.me/62899666077720" target="_blank" className="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="Chat WhatsApp">
-              WhatsApp 0899-6660-77720
+            <a href="https://wa.me/6289666077720" target="_blank" className="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="Chat WhatsApp">
+              WhatsApp 089-6660-77720
             </a>
             <a href="mailto:mebel@example.com" className="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-title="Kirim email ke kami">
               Email

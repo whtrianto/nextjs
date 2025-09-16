@@ -25,7 +25,7 @@ export default function ContactPage() {
 
         <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
           <h2 className="text-lg font-semibold">Alamat & Kontak</h2>
-          <p className="mt-2 text-sm text-gray-600">Toko Mebel Evas<br />Telp/WA: 0899-6660-77720</p>
+          <p className="mt-2 text-sm text-gray-600">Toko Mebel Evas<br />Telp/WA: 089-6660-77720</p>
           <div className="mt-4 overflow-hidden rounded-lg">
             <iframe
               title="Map"
@@ -37,7 +37,7 @@ export default function ContactPage() {
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
-          <a href="https://wa.me/62899666077720" target="_blank" className="btn btn-outline-primary mt-4">Chat WhatsApp</a>
+          <a href="https://wa.me/6289666077720" target="_blank" className="btn btn-outline-primary mt-4">Chat WhatsApp</a>
         </div>
       </div>
     </main>
